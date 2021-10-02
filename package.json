@@ -1,0 +1,12 @@
+{
+  "name": "next-at-home",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "JamiesWhiteShirt",
+  "license": "ISC",
+  "workspaces": [
+    "packages/server",
+    "packages/app"
+  ]
+}

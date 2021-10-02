@@ -1,0 +1,12 @@
+{
+	"compilerOptions": {
+		"composite": true,
+		"jsx": "react",
+		"esModuleInterop": true,
+		"target": "ES6",
+		"moduleResolution": "node",
+		"module": "CommonJS",
+		"rootDir": "src",
+		"outDir": "dist"
+	}
+}
