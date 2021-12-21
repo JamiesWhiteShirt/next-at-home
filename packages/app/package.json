@@ -2,10 +2,9 @@
   "name": "@next-at-home/app",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/index",
   "scripts": {
     "build": "tsc",
-    "start": "next-at-home-server"
+    "start": "ts-dev-server"
   },
   "author": "JamiesWhiteShirt",
   "license": "ISC",

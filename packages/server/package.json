@@ -4,7 +4,7 @@
   "description": "",
   "main": "dist/index.js",
   "bin": {
-    "next-at-home-server": "./dist/server.js"
+    "ts-dev-server": "./dist/ts-dev-server.js"
   },
   "devDependencies": {
     "@babel/polyfill": "^7.12.1",
@@ -28,7 +28,6 @@
   "author": "JamiesWhiteShirt",
   "license": "ISC",
   "dependencies": {
-    "@next-at-home/app": "*",
     "express": "^4.17.1",
     "pino": "^6.13.3",
     "through": "^2.3.8"

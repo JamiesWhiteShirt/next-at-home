@@ -1,16 +1,12 @@
 {
   "compilerOptions": {
+    "composite": true,
     "target": "ES6",
     "module": "CommonJS",
     "esModuleInterop": true,
     "strict": true,
     "jsx": "react",
-		"rootDir": "src",
-		"outDir": "dist"
-  },
-  "references": [
-    {
-      "path": "../app"
-    }
-  ]
+    "rootDir": "src",
+    "outDir": "dist"
+  }
 }

@@ -1,25 +1,26 @@
 import React from "react";
+import path from "path";
 import { RequestHandler } from "express";
 import { renderToNodeStream } from "react-dom/server";
 import { StaticRouter } from "react-router-dom";
 import { ServerStyleSheet } from "styled-components";
-import App from "@next-at-home/app";
 import { endingRawHTMLFragment, startingRawHTMLFragment } from "./client";
 import through, { ThroughStream } from "through";
 
 const handler: RequestHandler = (req, res) => {
-  const context: { url?: string } = {};
-
-  const app = (
-    <StaticRouter
-      location={req.originalUrl}
-      context={context}
-    >
-      <App />
-    </StaticRouter>
-  );
-
   try {
+    const context: { url?: string } = {};
+
+    const { default: App } = require(path.join(process.cwd(), "src", "App.tsx"));
+
+    const app = (
+      <StaticRouter
+        location={req.originalUrl}
+        context={context}
+      >
+        <App />
+      </StaticRouter>
+    );
     const sheet = new ServerStyleSheet();
     const stream = sheet.interleaveWithNodeStream(
       renderToNodeStream(sheet.collectStyles(app))

@@ -3,7 +3,7 @@ import express from "express";
 import ssr from "./lib/ssr";
 import ParcelBundler from "parcel-bundler";
 
-const bundler = new ParcelBundler(path.join(process.cwd(), "src", "client.tsx"), {
+const bundler = new ParcelBundler(path.join(process.cwd(), "src", "index.tsx"), {
   publicUrl: "/assets"
 });
 const app = express();
